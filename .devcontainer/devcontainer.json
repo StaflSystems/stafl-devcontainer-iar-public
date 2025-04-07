@@ -1,0 +1,35 @@
+{
+	"name": "Stafl Devcontainer - IAR",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "stafl-devcontainer-iar",
+
+	// The optional 'workspaceFolder' property is the path VS Code should open by default when
+	// connected.
+	"workspaceFolder": "/home/vscode",
+	
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools",
+				"ms-vscode.cmake-tools"
+			]
+		}
+	},
+	"remoteUser": "vscode",
+	"mounts": [
+		"src=/home/<YOUR_WSL_USERNAME>/projects,target=/home/vscode/projects,type=bind", // Replace with your WSL username
+		"source=/mnt/wslg,target=/mnt/wslg,type=bind", // comment out if not on Windows 11
+		"source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind" // comment out if not on Windows 11
+	],
+
+	"containerEnv": { // comment out if not on Windows 11
+		"DISPLAY": ":0",
+		"PULSE_SERVER": "/mnt/wslg/PulseServer",
+		"WAYLAND_DISPLAY": "wayland-0",
+		"XDG_RUNTIME_DIR": "/mnt/wslg/runtime-dir"
+	},
+
+	"shutdownAction": "stopCompose"
+}
