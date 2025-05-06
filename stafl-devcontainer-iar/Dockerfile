@@ -10,8 +10,6 @@ ENV PATH "$PATH:/opt/iarsystems/bxarmfs/arm/bin"
 
 FROM stafl-devcontainer-iar-${BXARM}
 
-COPY user-setup-scripts/ /user-setup-scripts/
-
 RUN  export DEBIAN_FRONTEND=noninteractive && \
      apt-get update && \
      apt-get install --no-install-recommends -y sudo libsqlite3-0 libxml2 tzdata && \

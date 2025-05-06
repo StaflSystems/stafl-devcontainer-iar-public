@@ -8,7 +8,7 @@ IAR Build Tools for ARM.
 ## Building the Container for CI Use
 
 - Place the `.deb` file(s) for _IAR Build Tools for ARM_ in `stafl-devcontainer/iar`
-- Run `docker build stafl-devcontainer -t stafl-devcontainer-iar:latest`
+- Run `docker build stafl-devcontainer-iar -t stafl-devcontainer-iar:latest`
     - Add `--build-arg BXARM=fs` to build the container with the FuSa version of _IAR Build Tools for ARM_.
 
 ## License Setup
