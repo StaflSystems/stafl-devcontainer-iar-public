@@ -7,9 +7,10 @@ IAR Build Tools for ARM.
 
 ## Building the Container for CI Use
 
-- Place the `.deb` file(s) for _IAR Build Tools for ARM_ in `stafl-devcontainer/iar`
+- Place the `.deb` file(s) for _IAR Build Tools for ARM_ in `stafl-devcontainer-iar/iar`
 - Run `docker build stafl-devcontainer-iar -t stafl-devcontainer-iar:latest`
     - Add `--build-arg BXARM=fs` to build the container with the FuSa version of _IAR Build Tools for ARM_.
+- If available, pleace the `.deb` file for _Axivion_ in `stafl-devcontainer-iar/axivion`. Place the `.key` license file alongside it.
 
 ## License Setup
 
