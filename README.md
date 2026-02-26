@@ -5,7 +5,7 @@
 This devcontainer is based on [StaflSystems/stafl-devcontainer](https://github.com/StaflSystems/stafl-devcontainer) but adds
 IAR Build Tools for ARM.
 
-## Building the Container for CI Use
+## Building the Container
 
 - Place the `.deb` file(s) for _IAR Build Tools for ARM_ in `stafl-devcontainer-iar/iar`
 - If available, pleace the `.deb` file for _Axivion_ in `stafl-devcontainer-iar/axivion`. Place the `.key` license file alongside it.
